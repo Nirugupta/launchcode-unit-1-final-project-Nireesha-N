@@ -1,9 +1,10 @@
-import "./App.css";
+import { GardenManager } from "./components/GardenManager.jsx";
 
-function App() {
-  // const [count, setCount] = useState(0)
-
-  return <>hello</>;
+export default function App() {
+  return (
+    <main>
+      <h1>LawnPulse</h1>
+      <GardenManager />
+    </main>
+  );
 }
-
-export default App;
