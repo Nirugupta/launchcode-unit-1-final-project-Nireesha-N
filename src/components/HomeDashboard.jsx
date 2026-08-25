@@ -1,39 +1,43 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./HomeDashboard.css";
 
 export function HomeDashboard() {
-  const navigate = useNavigate();
-
   return (
-    <section>
-      <div>
+    <div className="home-container">
+      <section className="hero-section">
         <h1>Welcome to LawnPulse 🌱</h1>
-        <p>Your complete property maintenance and lawn care planning hub.</p>
-      </div>
+        <p>Dashboard for lawn maintenance and garden tracking.</p>
+      </section>
 
-      <div>
-        <div>
-          <h3>Property Summary</h3>
-          <p>
-            <strong>Location:</strong> Main Lawn & Backyard Garden
-          </p>
-          <p>
-            <strong>Grass Type:</strong> Cool-season Blend
-          </p>
-          <p>
-            <strong>Next Activity:</strong> Fall Overseeding
-          </p>
-          <button onClick={() => navigate("/planner")}>View Schedule</button>
+      <section className="stats-grid">
+        <div className="stat-card">
+          <h3>Garden Items</h3>
+          <p className="stat-number">12</p>
         </div>
+        <div className="stat-card">
+          <h3>Pending Tasks</h3>
+          <p className="stat-number">3</p>
+        </div>
+        <div className="stat-card">
+          <h3>Last Mowed</h3>
+          <p className="stat-number">3 days ago</p>
+        </div>
+      </section>
 
-        <div>
-          <h3>💡 Seasonal Tip</h3>
-          <p>
-            <strong>Summer Care:</strong> Water deeply and infrequently in the
-            early morning to encourage deep root growth and minimize
-            evaporation.
-          </p>
+      <section className="quick-actions">
+        <h2>Quick Actions</h2>
+        <div className="action-buttons">
+          <Link to="/inventory" className="btn-action">
+            Manage Garden Inventory
+          </Link>
+          <Link to="/planner" className="btn-action">
+            View Care Planner
+          </Link>
+          <Link to="/mowing" className="btn-action">
+            Log Mowing Session
+          </Link>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

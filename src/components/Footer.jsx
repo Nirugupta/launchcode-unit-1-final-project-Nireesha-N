@@ -1,7 +1,12 @@
+import "./Footer.css";
+
 export function Footer() {
   return (
-    <footer>
-      <p>© 2026 LawnPulse | Built for Homeowners | Property Maintenance Hub</p>
+    <footer className="app-footer">
+      <div className="footer-container">
+        <p>© {new Date().getFullYear()} LawnPulse. All rights reserved.</p>
+        <p className="footer-tagline">Smart Lawn & Garden Management</p>
+      </div>
     </footer>
   );
 }
