@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HomeDashboard.css";
 
-export function HomeDashboard() {
+export function HomeDashboard({ inventoryCount = 0 }) {
   return (
     <div className="home-container">
       <section className="hero-section">
@@ -12,15 +12,12 @@ export function HomeDashboard() {
       <section className="stats-grid">
         <div className="stat-card">
           <h3>Garden Items</h3>
-          <p className="stat-number">12</p>
+          <p className="stat-number">{inventoryCount}</p>
         </div>
+
         <div className="stat-card">
-          <h3>Pending Tasks</h3>
-          <p className="stat-number">3</p>
-        </div>
-        <div className="stat-card">
-          <h3>Last Mowed</h3>
-          <p className="stat-number">3 days ago</p>
+          <h3>Care Status</h3>
+          <p className="stat-number">On Track</p>
         </div>
       </section>
 
@@ -32,9 +29,6 @@ export function HomeDashboard() {
           </Link>
           <Link to="/planner" className="btn-action">
             View Care Planner
-          </Link>
-          <Link to="/mowing" className="btn-action">
-            Log Mowing Session
           </Link>
         </div>
       </section>

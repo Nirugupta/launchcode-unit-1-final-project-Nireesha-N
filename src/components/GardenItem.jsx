@@ -1,13 +1,21 @@
+import "./GardenItem.css";
+
 export function GardenItem({ item, onDeleteItem, onStartEdit }) {
   return (
-    <div>
+    <div className="garden-card">
       <h3>{item.name}</h3>
-      <p>Category: {item.category}</p>
-      <p>Location: {item.location}</p>
-      {item.notes && <p>Notes: {item.notes}</p>}
+      <span className="card-category">{item.category}</span>
+      <p className="card-location">Location: {item.location}</p>
+      {item.notes && <p className="card-notes">Notes: {item.notes}</p>}
 
-      <button onClick={() => onStartEdit(item)}>Edit</button>
-      <button onClick={() => onDeleteItem(item.id)}>Delete</button>
+      <div className="card-actions">
+        <button className="btn-edit" onClick={() => onStartEdit(item)}>
+          Edit
+        </button>
+        <button className="btn-delete" onClick={() => onDeleteItem(item.id)}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 }

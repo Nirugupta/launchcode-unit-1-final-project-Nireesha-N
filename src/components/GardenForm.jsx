@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./GardenForm.css";
 
 export function GardenForm({
   name,
@@ -28,11 +29,11 @@ export function GardenForm({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="garden-form" onSubmit={handleSubmit}>
       <h3>{editingItem ? "Edit Garden Item" : "Add New Garden Item"}</h3>
-      {error && <p>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
 
-      <div>
+      <div className="form-field">
         <label>Item Name: </label>
         <input
           type="text"
@@ -42,7 +43,7 @@ export function GardenForm({
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label>Category: </label>
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="Lawn Zone">Lawn Zone</option>
@@ -52,7 +53,7 @@ export function GardenForm({
         </select>
       </div>
 
-      <div>
+      <div className="form-field">
         <label>Location / Zone: </label>
         <input
           type="text"
@@ -62,7 +63,7 @@ export function GardenForm({
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label>Notes: </label>
         <input
           type="text"
@@ -72,12 +73,16 @@ export function GardenForm({
         />
       </div>
 
-      <button type="submit">{editingItem ? "Update Item" : "Add Item"}</button>
-      {editingItem && (
-        <button type="button" onClick={onCancelEdit}>
-          Cancel
+      <div className="form-actions">
+        <button className="btn-submit" type="submit">
+          {editingItem ? "Update Item" : "Add Item"}
         </button>
-      )}
+        {editingItem && (
+          <button className="btn-cancel" type="button" onClick={onCancelEdit}>
+            Cancel
+          </button>
+        )}
+      </div>
     </form>
   );
 }
