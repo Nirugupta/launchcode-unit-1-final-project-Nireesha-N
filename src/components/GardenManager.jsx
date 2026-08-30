@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { initialGardenItems } from "../testdata/mockLawnData.js";
 import { GardenForm } from "./GardenForm.jsx";
 import { GardenList } from "./GardenList.jsx";
+import "./GardenManager.css";
 
-export function GardenManager() {
-  const [items, setItems] = useState(initialGardenItems);
-
+export function GardenManager({ items, setItems }) {
   const [editingItem, setEditingItem] = useState(null);
 
   const [name, setName] = useState("");
@@ -77,58 +75,60 @@ export function GardenManager() {
   });
 
   return (
-    <section>
+    <section className="inventory-section">
       <h2>Garden & Property Inventory</h2>
 
-      <GardenForm
-        name={name}
-        setName={setName}
-        category={category}
-        setCategory={setCategory}
-        location={location}
-        setLocation={setLocation}
-        notes={notes}
-        setNotes={setNotes}
-        editingItem={editingItem}
-        onSaveItem={handleSaveItem}
-        onCancelEdit={handleCancelEdit}
-      />
+      <div className="inventory-layout">
+        <GardenForm
+          name={name}
+          setName={setName}
+          category={category}
+          setCategory={setCategory}
+          location={location}
+          setLocation={setLocation}
+          notes={notes}
+          setNotes={setNotes}
+          editingItem={editingItem}
+          onSaveItem={handleSaveItem}
+          onCancelEdit={handleCancelEdit}
+        />
 
-      <hr />
-
-      <div>
-        <h3>Filter Inventory</h3>
         <div>
-          <label>Search: </label>
-          <input
-            type="text"
-            placeholder="Search by name or location..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+          <div className="filter-box">
+            <h3>Filter Inventory</h3>
+            <div className="filter-group">
+              <label>Search: </label>
+              <input
+                type="text"
+                placeholder="Search by name or location..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+
+            <div className="filter-group">
+              <label>Category: </label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+              >
+                <option value="All">All Categories</option>
+                <option value="Lawn Zone">Lawn Zone</option>
+                <option value="Plant / Flower">Plant / Flower</option>
+                <option value="Tree / Shrub">Tree / Shrub</option>
+                <option value="Supply / Chemical">Supply / Chemical</option>
+              </select>
+            </div>
+          </div>
+
+          <h3>Your Items ({filteredItems.length})</h3>
+          <GardenList
+            items={filteredItems}
+            onDeleteItem={handleDeleteItem}
+            onStartEdit={handleStartEdit}
           />
         </div>
-
-        <div>
-          <label>Category: </label>
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            <option value="All">All Categories</option>
-            <option value="Lawn Zone">Lawn Zone</option>
-            <option value="Plant / Flower">Plant / Flower</option>
-            <option value="Tree / Shrub">Tree / Shrub</option>
-            <option value="Supply / Chemical">Supply / Chemical</option>
-          </select>
-        </div>
       </div>
-
-      <h3>Your Items ({filteredItems.length})</h3>
-      <GardenList
-        items={filteredItems}
-        onDeleteItem={handleDeleteItem}
-        onStartEdit={handleStartEdit}
-      />
     </section>
   );
 }
