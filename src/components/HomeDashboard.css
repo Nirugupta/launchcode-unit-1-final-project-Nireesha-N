@@ -1,14 +1,17 @@
+/* Dashboard container layout alignment */
 .home-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Top welcome header hero alignment */
 .hero-section {
   text-align: center;
   margin-bottom: 30px;
 }
 
+/* Flexbox container for dynamic stat card indicators */
 .stats-grid {
   display: flex;
   gap: 20px;
@@ -16,6 +19,7 @@
   margin-bottom: 40px;
 }
 
+/* Individual metric summary card */
 .stat-card {
   flex: 1;
   background-color: #f4f6f4;
@@ -25,6 +29,7 @@
   border: 1px solid #ddd;
 }
 
+/* Prominent number callout within metric cards */
 .stat-number {
   font-size: 1.8rem;
   font-weight: bold;
@@ -32,10 +37,12 @@
   margin-top: 10px;
 }
 
+/* Quick navigation container wrapper */
 .quick-actions {
   text-align: center;
 }
 
+/* Horizontal action buttons container */
 .action-buttons {
   display: flex;
   gap: 15px;
@@ -43,6 +50,7 @@
   margin-top: 15px;
 }
 
+/* Button link call-to-action styling */
 .btn-action {
   background-color: #2e7d32;
   color: white;
@@ -52,6 +60,7 @@
   font-weight: bold;
 }
 
+/* Action button hover transition state */
 .btn-action:hover {
   background-color: #1b5e20;
 }

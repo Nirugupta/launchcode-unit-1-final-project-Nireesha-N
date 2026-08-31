@@ -1,16 +1,17 @@
+/* Page layout container width and padding */
 .planner-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
-
+/* Vertical stack for schedule cards */
 .schedule-cards {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
 }
-
+/* Card box style for routine items */
 .schedule-card {
   background-color: #f4f6f4;
   padding: 18px;
@@ -20,12 +21,12 @@
   flex-direction: column;
   gap: 8px;
 }
-
+/* Schedule card title text */
 .schedule-card h3 {
   margin: 0;
   color: #2e7d32;
 }
-
+/* Mark as Done button styling */
 .schedule-card button {
   align-self: flex-start;
   background-color: #2e7d32;
@@ -37,11 +38,11 @@
   font-weight: bold;
   margin-top: 5px;
 }
-
+/* Button hover state */
 .schedule-card button:hover {
   background-color: #1b5e20;
 }
-
+/* Outer box styling for weather section and seasonal tips */
 .weather-section,
 .seasonal-tips-section {
   background-color: #f4f6f4;
@@ -50,17 +51,17 @@
   border: 1px solid #ddd;
   margin-top: 24px;
 }
-
+/* Spacing around weather dropdown selector */
 .weather-selector {
   margin: 10px 0;
 }
-
+/* Weather dropdown styling */
 .weather-selector select {
   padding: 6px 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-
+/* Highlighted box for weather recommendation advice */
 .recommendation-box {
   background-color: #ffffff;
   padding: 12px;
@@ -68,7 +69,7 @@
   border-left: 4px solid #2e7d32;
   margin-top: 10px;
 }
-
+/* Seasonal tips list padding */
 .tips-list {
   padding-left: 20px;
   line-height: 1.6;

@@ -1,10 +1,11 @@
+/* Container styling for top navigation header */
 .navbar-header {
   background-color: var(--card-bg);
   border-bottom: 2px solid var(--border-color);
   padding: 14px 24px;
   margin-bottom: 24px;
 }
-
+/* Flexbox layout aligning brand title and navigation links */
 .navbar-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -12,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
 }
-
+/* Brand logo styling with primary theme color */
 .navbar-brand {
   color: var(--primary-color);
   font-size: clamp(1.2rem, 3vw, 1.5rem);
@@ -22,13 +23,13 @@
   align-items: center;
   gap: 8px;
 }
-
+/* Navigation links container flex alignment */
 .navbar-links {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
+/* Base navigation link typography and interactive positioning */
 .nav-link {
   color: var(--text-dark);
   text-decoration: none;
@@ -38,7 +39,7 @@
   border-radius: 4px;
   position: relative;
 }
-
+/* Visual divider line between adjacent navigation items */
 .nav-link:not(:last-child)::after {
   content: "|";
   position: absolute;
@@ -46,19 +47,19 @@
   color: var(--border-color);
   pointer-events: none;
 }
-
+/* Hover and active route indicator styling */
 .nav-link:hover,
 .nav-link.active {
   color: var(--primary-color);
   font-weight: 700;
 }
-
+/* Hide link divider pipe on tablet viewports */
 @media (max-width: 768px) {
   .nav-link:not(:last-child)::after {
     display: none;
   }
 }
-
+/* Stack navbar elements vertically on small mobile viewports */
 @media (max-width: 480px) {
   .navbar-container {
     flex-direction: column;

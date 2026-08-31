@@ -8,13 +8,16 @@ import { HomeDashboard } from "./components/HomeDashboard.jsx";
 import { CarePlanner } from "./components/CarePlanner.jsx";
 import { About } from "./components/About.jsx";
 import "./App.css";
-
+// Main application component setting up router navigation and inventory state
 export default function App() {
+  // Centralized state holding inventory items, initialized from mock data
   const [items, setItems] = useState(initialGardenItems);
 
   return (
     <div className="app-layout">
+      {/* Global top navigation bar */}
       <Navbar />
+      {/* Main content area rendering active route views */}
       <main>
         <Routes>
           <Route
@@ -29,6 +32,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
+      {/* Global footer component */}
       <Footer />
     </div>
   );

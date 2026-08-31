@@ -1,26 +1,27 @@
+/* Center and limit the page width */
 .about-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 24px;
 }
-
+/* Header section styles */
 .about-header {
   text-align: center;
   margin-bottom: 32px;
 }
-
+/* Main title styling */
 .about-header h1 {
   color: var(--primary-color, #2e7d32);
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   margin-bottom: 12px;
 }
-
+/* Intro paragraph styling */
 .about-header p {
   color: var(--text-dark, #333);
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
+/* Card box style for each section */
 .about-section {
   background-color: var(--card-bg, #ffffff);
   border: 1px solid var(--border-color, #e0e0e0);
@@ -29,23 +30,23 @@
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-
+/* Section heading titles */
 .about-section h2 {
   color: var(--primary-color, #2e7d32);
   font-size: 1.3rem;
   margin-bottom: 12px;
 }
-
+/* Text line spacing inside sections */
 .about-section p {
   line-height: 1.6;
   color: var(--text-dark, #444);
 }
-
+/* Bullet list spacing */
 .about-list {
   padding-left: 20px;
   line-height: 1.8;
 }
-
+/* Spacing between list items */
 .about-list li {
   margin-bottom: 8px;
 }
