@@ -1,3 +1,4 @@
+/* Container card wrapper for the inventory management page */
 .inventory-section {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -6,12 +7,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Section main heading title */
 .inventory-section h2 {
   font-size: clamp(1.3rem, 3vw, 1.75rem);
   margin-bottom: 20px;
   color: var(--primary-color);
 }
 
+/* 2-column grid layout splitting form and inventory list */
 .inventory-layout {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -19,6 +22,7 @@
   align-items: start;
 }
 
+/* Filter inputs control container */
 .filter-box {
   background-color: #f9fafb;
   border: 1px solid var(--border-color);
@@ -30,21 +34,25 @@
   gap: 12px;
 }
 
+/* Filter box title heading */
 .filter-box h3 {
   font-size: 1.1rem;
 }
 
+/* Vertical stack container for search/filter field and label pairs */
 .filter-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
+/* Filter input label typography */
 .filter-group label {
   font-weight: 600;
   font-size: 0.9rem;
 }
 
+/* Input and dropdown controls styling within filter box */
 .filter-group input,
 .filter-group select {
   padding: 8px 12px;
@@ -53,12 +61,14 @@
   font-size: 0.95rem;
 }
 
+/* Responsive adjustment switching grid to single column on tablet screens */
 @media (max-width: 900px) {
   .inventory-layout {
     grid-template-columns: 1fr;
   }
 }
 
+/* Mobile viewport spacing adjustments */
 @media (max-width: 600px) {
   .inventory-section {
     padding: 16px;

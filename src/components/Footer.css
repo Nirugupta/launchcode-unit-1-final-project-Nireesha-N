@@ -1,3 +1,4 @@
+/* Footer bar layout at the bottom of the page */
 .app-footer {
   background-color: #1f2937;
   color: #9ca3af;
@@ -7,7 +8,7 @@
   text-align: center;
   border-top: 1px solid var(--border-color);
 }
-
+/* Center footer content vertically */
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -15,7 +16,7 @@
   flex-direction: column;
   gap: 4px;
 }
-
+/* Subtitle text styling */
 .footer-tagline {
   color: #6b7280;
   font-size: 0.8rem;

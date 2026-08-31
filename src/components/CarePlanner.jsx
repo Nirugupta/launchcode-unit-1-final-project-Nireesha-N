@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./CarePlanner.css";
-
+// Care planner page showing maintenance tasks, weather advice, and seasonal tips
 export function CarePlanner() {
+  // State storing schedule list items
   const [schedules, setSchedules] = useState([
     {
       id: 1,
@@ -22,9 +23,9 @@ export function CarePlanner() {
       status: "Up to date 🌿",
     },
   ]);
-
+  // State storing currently selected weather filter
   const [weatherCondition, setWeatherCondition] = useState("Sunny");
-
+  // Marks a specific routine task as completed
   const handleComplete = (id) => {
     setSchedules(
       schedules.map((item) =>
@@ -39,7 +40,7 @@ export function CarePlanner() {
       <p>
         Recommended maintenance routines to keep your lawn healthy year-round.
       </p>
-
+      {/* Routine schedule cards list */}
       <div className="schedule-cards">
         {schedules.map((item) => (
           <div key={item.id} className="schedule-card">
@@ -56,7 +57,7 @@ export function CarePlanner() {
           </div>
         ))}
       </div>
-
+      {/* Interactive weather selection and advice box */}
       <div className="weather-section">
         <h3>Weather & Mowing Recommendation ☀️</h3>
         <div className="weather-selector">
@@ -70,6 +71,7 @@ export function CarePlanner() {
             <option value="Extreme Heat">Extreme Heat 🔥</option>
           </select>
         </div>
+        {/* Conditional recommendation based on weather selection */}
         <div className="recommendation-box">
           {weatherCondition === "Sunny" && (
             <p>
@@ -91,7 +93,7 @@ export function CarePlanner() {
           )}
         </div>
       </div>
-
+      {/* General seasonal advice list */}
       <div className="seasonal-tips-section">
         <h3>Seasonal Lawn Care Tips 🍂🌱</h3>
         <ul className="tips-list">

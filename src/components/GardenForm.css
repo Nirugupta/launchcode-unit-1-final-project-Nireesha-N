@@ -1,3 +1,4 @@
+/* Container card layout for the form */
 .garden-form {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
@@ -8,11 +9,13 @@
   gap: 16px;
 }
 
+/* Form header text sizing using responsive clamp */
 .garden-form h3 {
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   color: var(--text-dark);
 }
 
+/* Validation error alert styling */
 .error-message {
   color: var(--danger-color);
   background-color: #fef2f2;
@@ -22,17 +25,20 @@
   font-size: 0.9rem;
 }
 
+/* Vertical stack for label and input pairings */
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
+/* Field label typography */
 .form-field label {
   font-weight: 600;
   font-size: 0.9rem;
 }
 
+/* Input and dropdown field styling */
 .form-field input,
 .form-field select {
   padding: 10px;
@@ -41,17 +47,20 @@
   font-size: 0.95rem;
 }
 
+/* Focus state outline for interactive inputs */
 .form-field input:focus,
 .form-field select:focus {
   outline: 2px solid var(--primary-color);
   border-color: transparent;
 }
 
+/* Action button row layout */
 .form-actions {
   display: flex;
   gap: 10px;
 }
 
+/* Submit button styling */
 .btn-submit {
   background-color: var(--primary-color);
   color: #ffffff;
@@ -62,10 +71,12 @@
   cursor: pointer;
 }
 
+/* Submit button hover state */
 .btn-submit:hover {
   background-color: var(--primary-hover);
 }
 
+/* Cancel button styling */
 .btn-cancel {
   background-color: var(--secondary-color);
   color: #ffffff;
@@ -76,6 +87,7 @@
   cursor: pointer;
 }
 
+/* Cancel button hover state */
 .btn-cancel:hover {
   background-color: var(--secondary-hover);
 }
