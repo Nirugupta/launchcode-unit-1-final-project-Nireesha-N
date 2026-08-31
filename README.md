@@ -1,16 +1,31 @@
-# React + Vite
+# LawnPulse 🌱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LawnPulse is a React-based web application designed to help users track, manage, and schedule their lawn care and garden maintenance routines efficiently.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Garden & Lawn Management:** Track custom lawn care tasks, watering schedules, and treatment routines.
+- **Interactive Dashboard:** View upcoming tasks and maintenance progress at a glance.
+- **Responsive UI:** Built with a modern, user-friendly interface optimized for all screen sizes.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React, HTML5, CSS3, JavaScript (ES6+)
+- **Build Tool / Bundler:** Vite
+- **Package Manager:** npm
 
-## Expanding the ESLint configuration
+## ⚙️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these steps to run the project locally on your machine.
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Nirugupta/lawn-pulse.git](https://github.com/Nirugupta/lawn-pulse.git)
+   cd lawn-pulse
+   ```
